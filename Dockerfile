@@ -2,7 +2,7 @@ FROM ghcr.io/chia-network/chia
 
 WORKDIR /app
 RUN apt-get install -y htop
-RUN git clone https://github.com/swar/Swar-Chia-Plot-Manager.git  ./
+RUN git clone https://github.com/swar/Swar-Chia-Plot-Manager.git --branch v.0.1.0 ./
 
 copy ./run/startup.sh /app
 RUN chmod 655 /app/startup.sh
