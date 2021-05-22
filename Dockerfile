@@ -8,7 +8,7 @@ copy ./run/startup.sh /app
 RUN chmod 655 /app/startup.sh
 
 RUN python3 -m venv venv
-RUN /bin/bash -c "source ./venv/bin/activate && pip install -r requirements.txt"
+RUN /bin/bash -c "source ./venv/bin/activate && pip install -r requirements.txt && pip install -r requirements-notification.txt"
 
 ENTRYPOINT [ "./startup.sh" ]
 CMD ["./startup.sh"]
